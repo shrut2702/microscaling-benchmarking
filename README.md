@@ -27,6 +27,8 @@ This divergence stems from quantization granularity: per-tensor INT4 forces extr
 | Qwen3-VL-2B | BF16     | 78.59 | 79.84    |
 | Gemma3-4B | BF16     | 48.83 | 59.19    |
 | InternVL-3.5-1B | BF16     | 72.90 | 68.30    |
+| Molmo-7B-D | BF16     | 59.07 | 56.63    |
+| Eagle-2.5-8B | BF16     | remaining | remaining    |
 
 ### Quantized Results
 | Model         | Precision | Block Size | VQA   | TextVQA |
@@ -76,5 +78,19 @@ This divergence stems from quantization granularity: per-tensor INT4 forces extr
 | InternVL-3.5-1B | INT8   | - | 72.08 | 67.17    |
 | InternVL-3.5-1B | INT4   | -    | 0.00   | 0.00  |
 | InternVL-3.5-1B | INT2   | -         | 0.07     | 0.41       |
+| Molmo-7B-D | MXINT8   | 32         | 59.00 | 56.37   |
+|               |          | 128        | - | -   |
+| Molmo-7B-D | MXINT4   | 32         | 56.29 | 52.92    |
+|               |          | 128        | - | -   |
+| Molmo-7B-D | MXINT2   | 32         | 0.00     | 0.00       |
+|               |          | 128        | -     | -       |
+| Molmo-7B-D | INT8   | - | 58.97 | 57.29    |
+| Molmo-7B-D | INT4   | -    | 0.47   | 0.05  |
+| Molmo-7B-D | INT2   | -         | 0.07     | 0.41       |
+| Eagle-2.5-8B | MXINT8   | 32         | 82.41 | 82.75   |
+|               |          | 128        | - | -   |
+| Eagle-2.5-8B | MXINT4   | 32         | 81.31 | 81.25    |
+|               |          | 128        | - | -   |
+
 
 ---
